@@ -1,0 +1,16 @@
+1.	Write a C program to find the day of a week using switch-case.
+2.	Write a C program to find the month of a year using switch-case.
+3.	Write a C program to create a basic calculator using switch-case.
+4.	Write a C program to find the larger number between two numbers.
+5.	Write a C program to find the largest among three numbers.
+6.	Write a C program to find the smallest among three numbers.
+7.	Write a C program to check whether a given number is positive or negative.
+8.	Write a C program to check whether a given number is even or odd.
+9.	Write a C program to find the grade of a student in five subjects.
+10.	 Write a C program to find the gross salary of an employee. If basic salary is less than Rs. 15000/- then DA= Rs. 1200/- and HRA = 12% of basic. Otherwise, DA=15% and HRA= 29% of basic salary. Consider basic salary is user input. Gross salary = Basic salary + DA + HRA
+11.	Write a C program to check whether a given number is divisible by another number or not.
+12.	 A company insures its drivers in the following cases:
+a.	If the driver is married
+b.	If the driver is unmarried, male and above 30 years of age.
+c.	If the driver is unmarried, female and above 25 years of age.
+In all other cases the driver is not insured. If the marital status, gender and age of the driver are user inputs, write a program to determine whether the driver is to be insured or not.
