@@ -146,6 +146,7 @@ int Count()
     {
         count++;
         p = p->link;
+        printf("");
     }
     printf("\nNumber of elements in the list: %d\n", count);
     return count;
@@ -153,51 +154,7 @@ int Count()
 
 void InsertNThposition()
 {
-    int position;
-    printf("\nEnter the nth position where you want to insert (except 0) :\n");
-    scanf("%d", &position);
-
-    struct node *p;
-    int count = 0;
-    p = root;
-
-    // Count the number of nodes in the linked list
-    while (p != NULL)
-    {
-        count++;
-        p = p->link;
-    }
-
-    // Check if the provided position is valid
-    if (count > position && position != 0)
-    {
-        struct node *temp;
-        temp = (struct node *)malloc(sizeof(struct node));
-
-        int data;
-        printf("\nEnter the data to be inserted:\n");
-        scanf("%d", &data);
-
-        temp->data = data;
-        temp->link = NULL;
-
-            // Traverse to the n th position
-            p = root;
-            for (int i = 0; i < position ; i++)
-            {
-                p = p->link;
-            }
-
-            // Insert after n th position
-            temp->link = p->link;
-            p->link = temp;
-            printf("\nData inserted successfully at position %d.\n", position);
-
-    }
-    else
-    {
-        printf("\nInvalid position. Cannot insert at the given position.\n");
-    }
+    
 }
 
 
