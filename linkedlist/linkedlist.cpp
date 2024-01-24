@@ -38,7 +38,6 @@ struct node *root = NULL;
 int main()
 {
     MenuDrivenProgram();
-
     return 0;
 }
 
@@ -63,14 +62,13 @@ void Insertappend()
         struct node *p;
         p = root;
 
-        // traversing from one node to next node
         while (p->link != NULL)
         {
             p = p->link;
         }
         p->link = temp;
     }
-    printf("\nData inserted sucessfully\n");
+    printf("\nData inserted successfully\n");
 }
 
 void InsertBeg()
@@ -78,7 +76,7 @@ void InsertBeg()
     struct node *temp;
     int n;
     temp = (struct node *)malloc(sizeof(struct node));
-    printf("\nEnter data to be inserted :\n");
+    printf("\nEnter data to be inserted:\n");
     scanf("%d", &n);
     temp->data = n;
     temp->link = NULL;
@@ -169,12 +167,93 @@ void InsertNThposition()
 
 void DeleteBeg()
 {
+    if (root == NULL)
+    {
+        printf("\nList is empty. Deletion failed.\n");
+        return;
+    }
+
+    struct node *temp;
+    temp = root;
+    root = root->link;
+    free(temp);
+    printf("\nNode deleted from the beginning successfully.\n");
 }
+
 void DeleteEnd()
 {
+    if (root == NULL)
+    {
+        printf("\nList is empty. Deletion failed.\n");
+        return;
+    }
+
+    struct node *temp, *prev;
+    temp = root;
+    prev = NULL;
+
+    while (temp->link != NULL)
+    {
+        prev = temp;
+        temp = temp->link;
+    }
+
+    if (prev == NULL)
+    {
+        root = NULL;
+    }
+    else
+    {
+        prev->link = NULL;
+    }
+
+    free(temp);
+    printf("\nNode deleted from the end successfully.\n");
 }
+
 void DeleteNthPosition()
 {
+    int position;
+    printf("\nEnter the Position Number from which you want to delete:\n");
+    scanf("%d", &position);
+
+    if (position > 0)
+    {
+        struct node *temp, *prev;
+        temp = root;
+
+        if (position == 1)
+        {
+            root = temp->link;
+            free(temp);
+            printf("\nNode deleted from position %d successfully.\n", position);
+        }
+        else
+        {
+            prev = NULL;
+
+            for (int i = 1; (i < position && temp != NULL); i++)
+            {
+                prev = temp;
+                temp = temp->link;
+            }
+
+            if (temp != NULL)
+            {
+                prev->link = temp->link;
+                free(temp);
+                printf("\nNode deleted from position %d successfully.\n", position);
+            }
+            else
+            {
+                printf("\nInvalid position. Deletion failed.\n");
+            }
+        }
+    }
+    else
+    {
+        printf("\nInvalid position. Deletion failed.\n");
+    }
 }
 
 void display()
@@ -202,9 +281,9 @@ void MenuDrivenProgram()
     int choice;
     while (1)
     {
-        printf("\n\n\nPress 1 to at insert begining\nPress 2 at insert end (append)\nPress 3 to insert at n-th position\n");
-        printf("Press 4 Delete from Bgenning\npress 5 Delete from end\npress 6 Delete From n th position\n");
-        printf("Press 7 to display\nPress 8 to Count\nPress 9 to exit\n~ ");
+        printf("\n\n\nPress 1 to insert at beginning\nPress 2 to insert at end (append)\nPress 3 to insert at n-th position\n");
+        printf("Press 4 to delete from beginning\nPress 5 to delete from end\nPress 6 to delete from n-th position\n");
+        printf("Press 7 to display\nPress 8 to count\nPress 9 to exit\n~ ");
         scanf("%d", &choice);
 
         switch (choice)
