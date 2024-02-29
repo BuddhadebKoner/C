@@ -17,8 +17,8 @@
 //     }
 //     return -1;
 // }
+// this is O(1) of time complexcity
 
-// this is O(1) of time complexcity;
 int missingNumber(int* nums, int numsSize) {
     int sum = 0;
     int expectedSum = numsSize * (numsSize + 1) / 2;
