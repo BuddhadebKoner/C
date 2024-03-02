@@ -1,6 +1,7 @@
+// missing number problem 
+// Link - https://leetcode.com/problems/missing-number/
+
 #include<stdio.h>
-
-
 // this function time complexcity is O(n^2)
 // int missingNumber(int* nums, int n) {
 //     for (int i = 0; i <= n; i++) {
@@ -11,7 +12,7 @@
 //                 break;
 //             }
 //         }
-//         if (!found) {
+//         if(!found){
 //             return i;
 //         }
 //     }
@@ -41,11 +42,11 @@ int main(){
     }
 
     int result = missingNumber(nums, n);
-    if(result==0){
-        printf("No missing number have");
+    if (result==0)
+    {
+        printf("dont have missing number");
     }else{
-        printf("The missing number is: %d\n", result);
+        printf("the missing number is %d",result);
     }
-
     return 0;
 }
