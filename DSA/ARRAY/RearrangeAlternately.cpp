@@ -1,4 +1,4 @@
-// problem : 
+// problem : https://www.geeksforgeeks.org/problems/-rearrange-array-alternately-1587115620/1 
 // Given a sorted array of positive integers. 
 // Your task is to rearrange the array elements alternatively 
 // i.e first element should be max value, 
@@ -9,3 +9,11 @@
 
 // arr[] = {1,2,3,4,5,6}
 // Output: 6(max) 1(min) 5(2nd max) 2(2nd min) 4(3rd max) 3(3rd min)
+
+
+#include<stdio.h>
+
+int main(){
+
+    return 0;
+}
