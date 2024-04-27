@@ -1,0 +1,14 @@
+1. Write a C program to print your name.
+2. Write a C program to show the use of ‘\n’, ‘\t’, ‘\b’, ‘\r’.
+3. Write a C program to print your name within double quote.
+4. Write a C program to print ‘\n’.
+5. Write a C program to find addition, subtraction, multiplication, division, remainder of two numbers.
+6. Write a C program to add two numbers taking input from users.
+7. Write a C program to find average of 3 numbers taking input from user.
+8. Write a C program to find simple interest and compound interest.
+9. Write a C program to find area of a rectangle, square, triangle and a circle.
+10. Write a C program to find perimeter and circumference of a rectangle, square, triangle and a circle.
+11. Write a C program to swap two numbers – using and without using a third variable.
+12. Write a C program to find the roots of a quadratic equation.
+13. Using a C program convert a given Fahrenheit to its corresponding Celsius and vice-versa.
+14. Using a C program to find the circumference and area of a half circle.
